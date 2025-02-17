@@ -1,0 +1,20 @@
+#!/bin/bash
+
+read -p "Voulez-vous enregistrer la vérification du commit ? (y/[n]) " yn < /dev/tty
+yn=${yn:-n}  # Définit 'n' par défaut si l'utilisateur appuie juste sur Entrée
+
+case $yn in
+  [Yy]* )
+    # Créer le dossier 'suivi' s'il n'existe pas
+    mkdir -p suivi
+    # Écrire la date et l'heure dans le fichier commitInfo.txt
+    echo "commit vérifié le $(date '+%Y-%m-%d %H:%M:%S')" > suivi/commitInfo.txt
+    # Ajouter le fichier au commit
+    git add suivi/commitInfo.txt
+    ;;
+  [Nn]* )
+    # Ne rien faire
+    ;;
+esac
+
+exit 0
