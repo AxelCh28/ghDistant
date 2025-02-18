@@ -4,7 +4,7 @@ Algo HelloWorld {
         Créer une fenetre de titre HELLO_WORLD_TITLE
         Créer la couleur cyan
         Mettre la couleur cyan sur le fond de la fenêtre
-        Mettre la dimension à 1000, 600
+        Mettre la dimension à 800, 600
 	Aligner la fenêtre à gauche
         Configurer la fenetre sur ‘exitOnClose’
         // Création du label de texte
